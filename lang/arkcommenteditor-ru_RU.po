@@ -1,0 +1,142 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ark-wce\n"
+"POT-Creation-Date: 2014-11-03 14:12+0600\n"
+"PO-Revision-Date: 2014-11-03 15:55+0600\n"
+"Last-Translator: Александр Каратаев <ddw2@yandex.ru>\n"
+"Language-Team: Каратаев А.Р. <ddw2@yandex.ru>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-Basepath: D:\\WebServers\\home\\localhost\\www\\Server\\WordPress"
+"\\blog\\wordpress\\wp-content\\plugins\\ark-commenteditor\\\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: D:\\WebServers\\home\\localhost\\www\\Server"
+"\\WordPress\\blog\\wordpress\\wp-content\\plugins\\ark-commenteditor\n"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:87
+msgid "Plugin"
+msgstr "Плагин"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:91
+msgid "Settings visual editor comments"
+msgstr "Настройка визуального редактора комментариев"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:118
+msgid "Settings saved."
+msgstr "Настройки успешно сохранены"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:125
+msgid "Settings successfully restored the default."
+msgstr "Настройки успешно восстановлены по умолчанию!"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:135
+msgid "Language frontend Editor"
+msgstr "Язык интерфейса редактора"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:144
+msgid "Editor button"
+msgstr "Кнопки редактора"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:148
+msgid "Undo"
+msgstr "Отменить"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:150
+msgid "Redo"
+msgstr "Вернуть"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:153
+msgid "Bold"
+msgstr "Жирный"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:156
+msgid "Italic"
+msgstr "Курсив"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:159
+msgid "Underline"
+msgstr "Подчёркнутый"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:162
+msgid "Strikethrough"
+msgstr "Зачёркнутый"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:165
+msgid "Forecolor"
+msgstr "Цвет шрифта"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:168
+msgid "Backcolor"
+msgstr "Цвет фона шрифта"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:172
+msgid "Link"
+msgstr "Гиперссылка"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:175
+msgid "Image"
+msgstr "Изображение"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:178
+msgid "Blockquote"
+msgstr "Цитата"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:181
+msgid "Code"
+msgstr "Исходный код"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:184
+msgid "Bullist"
+msgstr "Маркированный список"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:187
+msgid "Numlist"
+msgstr "Нумерованный список"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:190
+msgid "Table"
+msgstr "Таблица"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:193
+msgid "Emoticons"
+msgstr "Смайлики"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:196
+msgid "Preview"
+msgstr "Предпросмотр"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:199
+msgid "Additional set of smileys"
+msgstr "Дополнительные наборы смайлов"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:214
+msgid "From a set of emoticons QIP"
+msgstr "Смайлы из набора  QIP"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:217
+msgid "From a set of emoticons Skype"
+msgstr "Смайлы из набора Скайп"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:220
+msgid "From a set of emoticons k-babe"
+msgstr "Смайлы из набора k-babe"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:225
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:226
+msgid "Restore Default Settings"
+msgstr "Восстановить настройки по умолчанию"
+
+#~ msgid "Настройки визуального редактора комментариев"
+#~ msgstr "Настройки визуального редактора комментариев"
+
+#~ msgid "Восстановить настройки по умолчанию"
+#~ msgstr "Восстановить настройки по умолчанию"
