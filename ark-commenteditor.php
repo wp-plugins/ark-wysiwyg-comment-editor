@@ -4,7 +4,7 @@ Plugin Name: ark-commenteditor
 Author: Александр Каратаев
 Plugin URI: http://blog.ddw.kz/plagin-ark-wysiwyg-comment-editor-vizualnyj-redaktor-kommentariev.html
 Description: Wysiwyg CommentEditor TinyMce Advanced
-Version: 1.3
+Version: 1.4
 Author URI: http://blog.ddw.kz
 License: GPL2
 */
@@ -83,12 +83,12 @@ add_action('admin_menu', 'ark_wce_add_pages');
 // Акция предыдущено хука
 function ark_wce_add_pages() {
     // Добавляем новое субменю в Options:
-    add_options_page('ark_commenteditor', 'ARK WYSIWYG Comment Editor', 8, 'ark_wce_ostoptions', 'ark_wce_options_page');
+    add_options_page('ark_commenteditor', 'ark-commenteditor', 8, 'ark_wce_ostoptions', 'ark_wce_options_page');
 }
 // Вывод страницы опций в субменю
 function ark_wce_options_page() {
 	screen_icon('users');
-    echo '<h2>'.__('Plugin','arkcommenteditor').'&nbsp;ARK WYSIWYG Comment Editor&nbsp;1.3</h2><div style="clear: both;float:right; padding-right:20px;"><noindex><a rel="nofollow" href="http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
+    echo '<h2>'.__('Plugin','arkcommenteditor').'&nbsp;ARK WYSIWYG Comment Editor&nbsp;1.4</h2><div style="clear: both;float:right; padding-right:20px;"><noindex><a rel="nofollow" href="http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 " target="_blank"><img align="right" src="' . plugins_url( '/img/donate.png', __FILE__ ) . '" alt="Пожертвовать" border="0" /></a></noindex></div>';
 ?>	
 <div class="wrap">

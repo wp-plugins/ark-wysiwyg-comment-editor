@@ -1,10 +1,10 @@
-=== ARK WYSIWYG Comment Editor ===
+=== ark-commenteditor ===
 Contributors: AlexKar
 Donate link: http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 Tags: wysiwyg comment editor, comment editor, editor, comment, wysiwyg
 Requires at least: 3.6.1
 Tested up to: 4.0
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,9 +21,9 @@ The plugin adds a fully customizable WYSIWYG editor based on TinyMCE 4.1.6 for c
 
 == Installation ==
 
-1. Загрузите плагин ark_commenteditor на свой блог. Download the ark_commenteditor plugin to your blog.
+1. Загрузите плагин ark-commenteditor на свой блог. Download the ark-commenteditor plugin to your blog.
 2. Активируйте его. Activate it.
-3. Настройте по своему усмотрению в панели управления на странице `Настройки - ARK WYSIWYG Comment Editor`. Set at its discretion in the control panel on page `Settings - ARK WYSIWYG Comment Editor`.
+3. Настройте по своему усмотрению в панели управления на странице `Настройки - ark-commenteditor`. Set at its discretion in the control panel on page `Settings - ark-commenteditor`.
 4. Более подробную информацию о плагине Вы можете найти на [странице плагина](http://blog.ddw.kz/plagin-ark-wysiwyg-comment-editor-vizualnyj-redaktor-kommentariev.html). For more information about the plugin can be found at [plugin page](http://blog.ddw.kz/plagin-ark-wysiwyg-comment-editor-vizualnyj-redaktor-kommentariev.html).
 
 == Screenshots ==
@@ -53,6 +53,9 @@ In this case, the plug-in may not work, since its action is based on the functio
 
 == Changelog ==
 
+= 1.4 =
+* Внутренняя оптимизация.
+
 = 1.3 =
 * Fix repository tags.
 
@@ -66,6 +69,9 @@ In this case, the plug-in may not work, since its action is based on the functio
 * Первая версия. The first version.
 
 == Upgrade Notice ==
+
+= 1.4 =
+* Внутренняя оптимизация.
 
 = 1.3 =
 * Fix repository tags.
