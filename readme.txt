@@ -4,7 +4,7 @@ Donate link: http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 Tags: wysiwyg comment editor, comment editor, editor, comment, wysiwyg
 Requires at least: 3.6.1
 Tested up to: 4.0
-Stable tag: 1.5
+Stable tag: 1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -64,6 +64,9 @@ In this case, the plug-in may not work, since its action is based on the functio
 
 == Changelog ==
 
+= 1.6 =
+* Пофиксена ошибка версии 1.5.
+
 = 1.5 =
 * Улучшения и расширение функционала редактора.
 
@@ -83,6 +86,9 @@ In this case, the plug-in may not work, since its action is based on the functio
 * Первая версия. The first version.
 
 == Upgrade Notice ==
+
+= 1.6 =
+* Пофиксена ошибка версии 1.5.
 
 = 1.5 =
 * Упорядочено размещение кнопок редактора. Теперь кнопки по возможности будут размещаться в первой панели.
