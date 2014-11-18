@@ -4,7 +4,7 @@ Donate link: http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 Tags: wysiwyg comment editor, comment editor, editor, comment, wysiwyg
 Requires at least: 3.6.1
 Tested up to: 4.0
-Stable tag: 1.4
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,9 +14,19 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Плагин добавляет полностью настраиваемый визуальный редактор на базе TinyMCE 4.1.6 для комментариев, при этом используется CDN версия редактора.
 
+Помимо этого, плагин добавляет в редактор дополнительные наборы смайлов, которые можно включить или отключить в настройках.
+  
 Более подробную информацию вы найдете на [странице плагина](http://blog.ddw.kz/plagin-ark-wysiwyg-comment-editor-vizualnyj-redaktor-kommentariev.html).
 
+Если вам понравился мой плагин, то `пожалуйста` поставьте ему 5 звезд.
+
 The plugin adds a fully customizable WYSIWYG editor based on TinyMCE 4.1.6 for comments, using the CDN version of the editor.
+
+In addition, the plugin adds an additional set of smileys editor that can be turned on or off in the settings.
+  
+More information can be found at [plugin page](http://blog.ddw.kz/plagin-ark-wysiwyg-comment-editor-vizualnyj-redaktor-kommentariev.html).
+
+If you liked my plugin, then put it 5 stars `please`.
 
 
 == Installation ==
@@ -32,6 +42,7 @@ The plugin adds a fully customizable WYSIWYG editor based on TinyMCE 4.1.6 for c
 2. Написание комментария. Writing a comment.
 3. Предпросмотр. Preview.
 4. Сохранённый комментарий. Comment saved.
+5. Встроенная цитата в редакторе. Built quote in the editor.
 
 == Frequently Asked Questions ==
 
@@ -53,6 +64,9 @@ In this case, the plug-in may not work, since its action is based on the functio
 
 == Changelog ==
 
+= 1.5 =
+* Улучшения и расширение функционала редактора.
+
 = 1.4 =
 * Внутренняя оптимизация.
 
@@ -69,6 +83,20 @@ In this case, the plug-in may not work, since its action is based on the functio
 * Первая версия. The first version.
 
 == Upgrade Notice ==
+
+= 1.5 =
+* Упорядочено размещение кнопок редактора. Теперь кнопки по возможности будут размещаться в первой панели.
+* Добавлена возможность зафиксировать ширину редактора.
+* Добавлена собственная кнопка вставки цитат, с более удобным функционалом, чем стандартная.
+* Добавлен встроенный стиль цитат, который можно использовать по желанию.
+* Добавлена возможность отображать этот стиль прямо в редакторе, а не только после сохранения комментария.
+* Все ссылки, вставленные в комментарий теперь по умолчанию будут открываться на новой вкладке, посетитель, кликнув по ссылке не покинет Ваш блог.
+* Ordered placement editor buttons. The buttons are placed as far as possible in the first panel.
+* Added the ability to fix the width of the editor.
+* Added own button insert citations from more convenient functionality than the standard.
+* Added built-style quotes which can be used if desired.
+* Added the ability to display this style directly in the editor, and not only after you save the comment.
+* All links are inserted in a comment now by default will open in a new tab, the visitor clicking the link would not leave your blog.
 
 = 1.4 =
 * Внутренняя оптимизация.

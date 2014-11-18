@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ark-wce\n"
-"POT-Creation-Date: 2014-11-03 14:12+0600\n"
-"PO-Revision-Date: 2014-11-03 15:55+0600\n"
+"POT-Creation-Date: 2014-11-18 14:52+0600\n"
+"PO-Revision-Date: 2014-11-18 14:52+0600\n"
 "Last-Translator: Александр Каратаев <ddw2@yandex.ru>\n"
 "Language-Team: Каратаев А.Р. <ddw2@yandex.ru>\n"
 "Language: ru_RU\n"
@@ -10,128 +10,203 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.10\n"
-"X-Poedit-Basepath: D:\\WebServers\\home\\localhost\\www\\Server\\WordPress"
-"\\blog\\wordpress\\wp-content\\plugins\\ark-commenteditor\\\n"
+"X-Poedit-Basepath: D:\\Disks\\Dropbox\\WebServers\\home\\localhost\\www"
+"\\Server\\WordPress\\blog\\wordpress\\wp-content\\plugins\\ark-commenteditor"
+"\\\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-SearchPath-0: D:\\WebServers\\home\\localhost\\www\\Server"
-"\\WordPress\\blog\\wordpress\\wp-content\\plugins\\ark-commenteditor\n"
+"X-Poedit-SearchPath-0: D:\\Disks\\Dropbox\\WebServers\\home\\localhost\\www"
+"\\Server\\WordPress\\blog\\wordpress\\wp-content\\plugins\\ark-"
+"commenteditor\n"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:87
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:96
 msgid "Plugin"
 msgstr "Плагин"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:91
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:100
 msgid "Settings visual editor comments"
 msgstr "Настройка визуального редактора комментариев"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:118
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:132
 msgid "Settings saved."
 msgstr "Настройки успешно сохранены"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:125
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:138
 msgid "Settings successfully restored the default."
 msgstr "Настройки успешно восстановлены по умолчанию!"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:135
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:146
+msgid "Editor Options"
+msgstr "Опции редактора"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:150
 msgid "Language frontend Editor"
 msgstr "Язык интерфейса редактора"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:144
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:157
+msgid "Fixed width Editor"
+msgstr "Зафиксировать ширину редактора"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:160
+msgid "Editor Width"
+msgstr "Ширина редактора"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:163
 msgid "Editor button"
 msgstr "Кнопки редактора"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:148
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:167
 msgid "Undo"
 msgstr "Отменить"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:150
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:169
 msgid "Redo"
 msgstr "Вернуть"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:153
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:172
 msgid "Bold"
 msgstr "Жирный"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:156
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:175
 msgid "Italic"
 msgstr "Курсив"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:159
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:178
 msgid "Underline"
 msgstr "Подчёркнутый"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:162
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:181
 msgid "Strikethrough"
 msgstr "Зачёркнутый"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:165
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:184
 msgid "Forecolor"
 msgstr "Цвет шрифта"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:168
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:187
 msgid "Backcolor"
 msgstr "Цвет фона шрифта"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:172
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:191
 msgid "Link"
 msgstr "Гиперссылка"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:175
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:194
 msgid "Image"
 msgstr "Изображение"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:178
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:197
 msgid "Blockquote"
 msgstr "Цитата"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:181
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:200
 msgid "Code"
 msgstr "Исходный код"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:184
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:203
 msgid "Bullist"
 msgstr "Маркированный список"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:187
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:206
 msgid "Numlist"
 msgstr "Нумерованный список"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:190
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:209
 msgid "Table"
 msgstr "Таблица"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:193
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:212
 msgid "Emoticons"
 msgstr "Смайлики"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:196
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:215
 msgid "Preview"
 msgstr "Предпросмотр"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:199
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:218
 msgid "Additional set of smileys"
 msgstr "Дополнительные наборы смайлов"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:214
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:233
 msgid "From a set of emoticons QIP"
 msgstr "Смайлы из набора  QIP"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:217
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:236
 msgid "From a set of emoticons Skype"
 msgstr "Смайлы из набора Скайп"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:220
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:239
 msgid "From a set of emoticons k-babe"
 msgstr "Смайлы из набора k-babe"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:225
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:244
+msgid "Experimental options"
+msgstr "Экспериментальные опции"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:245
+msgid ""
+"These options and their experimental use of a matter of personal preference. "
+"Try it - you may like it. If not - at any time, deselect options."
+msgstr ""
+"Эти опции экспериментальные и их использование дело личных предпочтений. "
+"Попробуйте - может быть Вам это понравится. Если нет - в любой момент "
+"отмените выбор опций."
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:248
+msgid "Improved button quotes"
+msgstr "Улучшенная кнопка цитат"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:249
+msgid ""
+"This button is in contrast to the standard, put quotes and performs a line "
+"feed. This functionality greatly simplifies the insertion of citations and "
+"the writing of the text after it."
+msgstr ""
+"Эта кнопка в отличие от стандартной, вставляет цитату и осуществляет перевод "
+"строки. Такой функционал заметно упрощает вставку цитаты и написание текста "
+"после неё."
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:253
+msgid "Use the citation style plugin"
+msgstr "Использовать стиль цитат плагина"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:254
+msgid ""
+"The default style quotes of your template. Selecting this option will "
+"replace this style style plug. He is such what is there and can not be "
+"adjusted. If not work, or just do not like it - deselect."
+msgstr ""
+"По умолчанию используется стиль цитат Вашего шаблона. Выбор данной опции "
+"позволит заменить этот стиль стилем плагина. Он такой какой есть и никак не "
+"настраивается. Если не подойдёт или просто не понравится - отмените выбор."
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:258
+msgid "Sample quote"
+msgstr "Пример цитаты"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:259
+msgid "This is just a sample quote."
+msgstr "Это просто пример цитаты"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:264
+msgid "Use the citation style plug-in editor"
+msgstr "Использовать стиль цитаты плагина внутри редактора"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:265
+msgid ""
+"Selecting this option will allow you to see the formatted quote directly "
+"when editing. Valid only on the built-in style plugin."
+msgstr ""
+"Выбор этой опции позволит увидеть отформатированную цитату прямо при "
+"редактировании. Действует только на встроенный стиль плагина."
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:269
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
-#: D:\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:226
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-commenteditor/ark-commenteditor.php:270
 msgid "Restore Default Settings"
 msgstr "Восстановить настройки по умолчанию"
 
