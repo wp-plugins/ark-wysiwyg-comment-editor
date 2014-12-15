@@ -4,7 +4,7 @@ Plugin Name: ark-commenteditor
 Author: Александр Каратаев
 Plugin URI: http://blog.ddw.kz/plagin-ark-wysiwyg-comment-editor-vizualnyj-redaktor-kommentariev.html
 Description: Visual CommentEditor TinyMce Advanced
-Version: 1.6
+Version: 1.7
 Author URI: http://blog.ddw.kz
 License: GPL2
 */
@@ -80,6 +80,8 @@ $ark_wce_option = array(
 'btn_arkbquote' => '0',
 'wce_addbquotestyle' => '0',
 'wce_edtbquotestyle' => '0',
+'box_font' => '0',
+'box_fontsize' => '0',
 );
 add_option('ark_wce', $ark_wce_option,'','no');
 }
@@ -93,7 +95,7 @@ function ark_wce_add_pages() {
 // Вывод страницы опций в субменю
 function ark_wce_options_page() {
 	screen_icon('users');
-    echo '<h2>'. __('Plugin','arkcommenteditor').'&nbsp;ARK WYSIWYG Comment Editor&nbsp;1.6</h2><div style="clear: both;float:right; padding-right:20px;"><noindex><a rel="nofollow" href="http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
+    echo '<h2>'. __('Plugin','arkcommenteditor').'&nbsp;ARK WYSIWYG Comment Editor&nbsp;1.7</h2><div style="clear: both;float:right; padding-right:20px;"><noindex><a rel="nofollow" href="http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 " target="_blank"><img align="right" src="' . plugins_url( '/img/donate.png', __FILE__ ) . '" alt="Пожертвовать" border="0" /></a></noindex></div>';
 ?>	
 <div class="wrap">
@@ -127,6 +129,8 @@ $ark_wce_option = array(
 'btn_arkbquote' => $_POST['btn_arkbquote'],
 'wce_addbquotestyle' => $_POST['wce_addbquotestyle'],
 'wce_edtbquotestyle' => $_POST['wce_edtbquotestyle'],
+'box_font' => $_POST['box_font'],
+'box_fontsize' => $_POST['box_fontsize'],
 );
 update_option('ark_wce', $ark_wce_option);
 echo '<div id="setting-error-settings_updated" class="updated settings-error"><p><b>'.__('Settings saved.','arkcommenteditor').'</b></p></div>';
@@ -186,7 +190,16 @@ $result = get_option('ark_wce');
 <td>
 <img src="<?php echo plugins_url( '/img/backcolor.png', __FILE__ ); ?>" title="<?php _e('Backcolor','arkcommenteditor'); ?>" valign="top">  <input type="checkbox" name="btn_backcolor" value="1" <?php if ($result['btn_backcolor'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
 </td>
-</tr></table><br><hr><table><tr>
+</tr></table><br><hr>
+<table>
+<tr>
+<td>
+<img src="<?php echo plugins_url( '/img/fontsize.png', __FILE__ ); ?>" title="<?php _e('FontSize','arkcommenteditor'); ?>" valign="top">  <input type="checkbox" name="box_fontsize" value="1" <?php if ($result['box_fontsize'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
+</td><td>
+<img src="<?php echo plugins_url( '/img/font.png', __FILE__ ); ?>" title="<?php _e('Font','arkcommenteditor'); ?>" valign="top">  <input type="checkbox" name="box_font" value="1" <?php if ($result['box_font'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
+</td>
+</tr></table><br><hr>
+<table><tr>
 <td>
 <img src="<?php echo plugins_url( '/img/link.png', __FILE__ ); ?>" title="<?php _e('Link','arkcommenteditor'); ?>" valign="top">  <input type="checkbox" name="btn_link" value="1" <?php if ($result['btn_link'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
 </td>
@@ -286,6 +299,10 @@ $bar1 = '';
 if ($result['btn_undo'] == 1) { $bar1 = $bar1 . ' undo '; $kvobtn++; }
 if ($result['btn_redo'] == 1) { $bar1 = $bar1 . ' redo'; $kvobtn++; }
 if ($bar1!='') { $bar1 = $bar1 .  ' | '; }
+$barfont = '';
+if ($result['box_fontsize'] == 1) { $barfont = $barfont . ' fontsizeselect'; $kvobtn++; }
+if ($result['box_font'] == 1) { $barfont = $barfont . ' fontselect'; $kvobtn++; }
+if ($barfont!='') { $barfont = $barfont .  ' | '; }
 $bar2 = '';
 if ($result['btn_bold'] == 1) { $bar2 = $bar2 . ' bold'; $kvobtn++; }
 if ($result['btn_italic'] == 1) { $bar2 = $bar2 . ' italic'; $kvobtn++; }
@@ -336,7 +353,7 @@ $wceexplugins = $wceexplugins . '"arkbquote" :  "'.plugins_url( '/plugins/arkbqu
 if ($result['btn_preview'] == 1) { $bar10 = $bar10 . ' preview'; $kvobtn++; $wceplugins = $wceplugins . ', preview'; }
 if ($bar10!='') { $bar10 = $bar10 .  ' | '; }
 // Формируем тулбары
-$toolbar = $bar1 . $bar2 . $bar3 . $bar4 . $bar5 . $bar6 . $bar7 . $bar8 . $bar9 . $bar10 ;
+$toolbar = $bar1 . $barfont. $bar2 . $bar3 . $bar4 . $bar5 . $bar6 . $bar7 . $bar8 . $bar9 . $bar10;
 $toolbar = '["' . $toolbar . '"]';
 //echo $toolbar;
 // формируем external_plugins
@@ -362,6 +379,7 @@ $myeditor = '
 		' . $wcewidth . '
 		' . $wcelang . '
 		menubar : false,
+		fontsize_formats :  "8pt 10pt 12pt 14pt 18пт 24pt 36pt",
 		statusbar : false,
 		convert_urls : false,
 		browser_spellcheck : true,

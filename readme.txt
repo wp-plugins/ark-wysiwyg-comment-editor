@@ -3,8 +3,8 @@ Contributors: AlexKar
 Donate link: http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 Tags: wysiwyg comment editor, comment editor, editor, comment, wysiwyg
 Requires at least: 3.6.1
-Tested up to: 4.0
-Stable tag: 1.6
+Tested up to: 4.1
+Stable tag: 1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Плагин добавляет полностью настраиваемый визуальный редактор на базе TinyMCE 4.1.6 для комментариев, при этом используется CDN версия редактора.
+Плагин добавляет полностью настраиваемый визуальный редактор на базе линейки TinyMCE 4.1 для комментариев, при этом используется CDN версия редактора.
 
 Помимо этого, плагин добавляет в редактор дополнительные наборы смайлов, которые можно включить или отключить в настройках.
   
@@ -64,6 +64,9 @@ In this case, the plug-in may not work, since its action is based on the functio
 
 == Changelog ==
 
+= 1.7 =
+* Добавлена возможность настройки шрифтов.
+
 = 1.6 =
 * Пофиксена ошибка версии 1.5.
 
@@ -86,6 +89,9 @@ In this case, the plug-in may not work, since its action is based on the functio
 * Первая версия. The first version.
 
 == Upgrade Notice ==
+
+= 1.7 =
+* В редакторе можно выбрать шрифт и его размер.
 
 = 1.6 =
 * Пофиксена ошибка версии 1.5.
