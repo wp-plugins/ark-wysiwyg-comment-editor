@@ -8,7 +8,7 @@ Stable tag: 1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Плагин добавляет визуальный редактор для комментариев. The plugin adds a wysiwyg editor for comments.
+The plugin adds a wysiwyg editor for comments.
 
 == Description ==
 
