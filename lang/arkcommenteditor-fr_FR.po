@@ -1,0 +1,226 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ark-wce\n"
+"POT-Creation-Date: 2014-12-15 15:55+0600\n"
+"PO-Revision-Date: 2015-01-22 20:53+0100\n"
+"Last-Translator: Александр Каратаев <ddw2@yandex.ru>\n"
+"Language-Team: Каратаев А.Р. <ddw2@yandex.ru>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-Basepath: D:\\Disks\\Dropbox\\WebServers\\home\\localhost\\www"
+"\\Server\\WordPress\\blog\\wordpress\\wp-content\\plugins\\ark-wysiwyg-"
+"comment-editor\\\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: D:\\Disks\\Dropbox\\WebServers\\home\\localhost\\www"
+"\\Server\\WordPress\\blog\\wordpress\\wp-content\\plugins\\ark-wysiwyg-"
+"comment-editor\n"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:98
+msgid "Plugin"
+msgstr "Plugin"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:102
+msgid "Settings visual editor comments"
+msgstr "Paramètres de l'éditeur visuel des commentaires"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:136
+msgid "Settings saved."
+msgstr "Paramètres sauvegardés"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:142
+msgid "Settings successfully restored the default."
+msgstr "Les paramètres ont bien été restaurés par défaut."
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:150
+msgid "Editor Options"
+msgstr "Options de l'éditeur"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:154
+msgid "Language frontend Editor"
+msgstr "Langage de l'éditeur de commentaire"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:161
+msgid "Fixed width Editor"
+msgstr "Editeur avec largeur fixe"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:164
+msgid "Editor Width"
+msgstr "Largeur de l'éditeur"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:167
+msgid "Editor button"
+msgstr "Boutons à insérer dans l'éditeur"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:171
+msgid "Undo"
+msgstr "Annuler"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:173
+msgid "Redo"
+msgstr "Rétablir"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:176
+msgid "Bold"
+msgstr "Gras"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:179
+msgid "Italic"
+msgstr "Italique"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:182
+msgid "Underline"
+msgstr "Souligné"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:185
+msgid "Strikethrough"
+msgstr "Barré"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:188
+msgid "Forecolor"
+msgstr "Couleur du texte"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:191
+msgid "Backcolor"
+msgstr "Couleur de fond du texte"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:197
+msgid "FontSize"
+msgstr "Taille de police"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:199
+msgid "Font"
+msgstr "Police"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:204
+msgid "Link"
+msgstr "Lien URL"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:207
+msgid "Image"
+msgstr "Image"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:210
+msgid "Blockquote"
+msgstr "Citation"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:213
+msgid "Code"
+msgstr "Code"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:216
+msgid "Bullist"
+msgstr "Paragraphes"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:219
+msgid "Numlist"
+msgstr "Liste numérotée"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:222
+msgid "Table"
+msgstr "Table"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:225
+msgid "Emoticons"
+msgstr "Emoticons"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:228
+msgid "Preview"
+msgstr "Prévisualisation"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:231
+msgid "Additional set of smileys"
+msgstr "Packs de smileys supplémentaires"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:246
+msgid "From a set of emoticons QIP"
+msgstr "Smileys QIP"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:249
+msgid "From a set of emoticons Skype"
+msgstr "Smileys Skype"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:252
+msgid "From a set of emoticons k-babe"
+msgstr "Smileys k-babe"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:257
+msgid "Experimental options"
+msgstr "Fonctions expérimentales"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:258
+msgid ""
+"These options and their experimental use of a matter of personal preference. "
+"Try it - you may like it. If not - at any time, deselect options."
+msgstr ""
+"Ces options et leur utilisation sont expérimentales, il s'agit d'une "
+"question de préférence personnelle. Essayez-les, vous aimerez peut-être. "
+"Dans le cas contraire, vous pourrez décocher les options à tout moment."
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:261
+msgid "Improved button quotes"
+msgstr "Bouton de citation amélioré"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:262
+msgid ""
+"This button is in contrast to the standard, put quotes and performs a line "
+"feed. This functionality greatly simplifies the insertion of citations and "
+"the writing of the text after it."
+msgstr ""
+"Ce bouton est en contraste avec la norme, les citations sont affichées avec "
+"un saut de ligne. Cette fonctionnalité simplifie grandement l'insertion de "
+"citations et la rédaction du texte qui suit."
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:266
+msgid "Use the citation style plugin"
+msgstr "Utiliser le style de citation du plugin"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:267
+msgid ""
+"The default style quotes of your template. Selecting this option will "
+"replace this style style plug. He is such what is there and can not be "
+"adjusted. If not work, or just do not like it - deselect."
+msgstr ""
+"Modèle de citation par défaut. Sélectionner cette option va remplacer le "
+"style. Il ne pourra pas être ajusté. Si ce modèle ne fonctionne pas, ou tout "
+"simplement si vous ne l'aimez pas, vous pouvez décocher cette option."
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:271
+msgid "Sample quote"
+msgstr "Exemple de citation"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:272
+msgid "This is just a sample quote."
+msgstr "Il s'agit tout simplement d'un exemple de citation."
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:277
+msgid "Use the citation style plug-in editor"
+msgstr "Utilisez le style de citation du plugin"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:278
+msgid ""
+"Selecting this option will allow you to see the formatted quote directly "
+"when editing. Valid only on the built-in style plugin."
+msgstr ""
+"La sélection de cette option vous permettra de voir directement la citation "
+"formatée lors de l'édition. Valable uniquement sur le plugin de style "
+"intégré."
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:282
+msgid "Save Changes"
+msgstr "Sauvegarder les modifications"
+
+#: D:\Disks\Dropbox\WebServers\home\localhost\www\Server\WordPress\blog\wordpress\wp-content\plugins\ark-wysiwyg-comment-editor/ark-commenteditor.php:283
+msgid "Restore Default Settings"
+msgstr "Restaurer les réglages par défaut"
+
+#~ msgid "Настройки визуального редактора комментариев"
+#~ msgstr "Настройки визуального редактора комментариев"
+
+#~ msgid "Восстановить настройки по умолчанию"
+#~ msgstr "Восстановить настройки по умолчанию"

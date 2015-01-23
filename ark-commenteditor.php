@@ -4,7 +4,7 @@ Plugin Name: ark-commenteditor
 Author: Александр Каратаев
 Plugin URI: http://blog.ddw.kz/plagin-ark-wysiwyg-comment-editor-vizualnyj-redaktor-kommentariev.html
 Description: Visual CommentEditor TinyMce Advanced
-Version: 1.7
+Version: 1.8
 Author URI: http://blog.ddw.kz
 License: GPL2
 */
@@ -95,7 +95,7 @@ function ark_wce_add_pages() {
 // Вывод страницы опций в субменю
 function ark_wce_options_page() {
 	screen_icon('users');
-    echo '<h2>'. __('Plugin','arkcommenteditor').'&nbsp;ARK WYSIWYG Comment Editor&nbsp;1.7</h2><div style="clear: both;float:right; padding-right:20px;"><noindex><a rel="nofollow" href="http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
+    echo '<h2>'. __('Plugin','arkcommenteditor').'&nbsp;ARK WYSIWYG Comment Editor&nbsp;1.8</h2><div style="clear: both;float:right; padding-right:20px;"><noindex><a rel="nofollow" href="http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 " target="_blank"><img align="right" src="' . plugins_url( '/img/donate.png', __FILE__ ) . '" alt="Пожертвовать" border="0" /></a></noindex></div>';
 ?>	
 <div class="wrap">
@@ -155,6 +155,7 @@ $result = get_option('ark_wce');
 &nbsp;<select size="1" name="wce_lang">
     <option <?php if ($result['wce_lang'] == "русский") { echo "selected"; } ?> value="русский">Русский</option>
     <option <?php if ($result['wce_lang'] == "english") { echo "selected"; } ?> value="english">English</option>
+	<option <?php if ($result['wce_lang'] == "french") { echo "selected"; } ?> value="french">French</option>
 </select>
 </td>
 <td>
@@ -282,8 +283,12 @@ $result = get_option('ark_wce');
 <input type="submit" name="save" class="button-primary" value="<?php _e('Save Changes','arkcommenteditor') ?>" />
 <input name="reset" type="submit" class="button-primary" value="<?php _e('Restore Default Settings','arkcommenteditor') ?>" />
 </p>
-
 </form>
+<hr>
+<h3><?php _e('Thanks','arkcommenteditor'); ?></h3>
+<table bgcolor="#fff"><tr>
+<td><b>French translation - Laurent</b>&nbsp;&nbsp; http://www.android-logiciels.fr/
+</td></tr></table>
 </div>	
 <?php
 }
@@ -361,7 +366,18 @@ if ($wceexplugins != '') {
 $wceexplugins = 'external_plugins :  { ' . $wceexplugins . ' }, ';
 }
 // Формируем языковые настройки
-if ($result['wce_lang']=="english") { $wcelang = '';} else {$wcelang = 'language_url : "'.plugins_url( '/js/ru.js',__FILE__ ) .'",';}
+/*if ($result['wce_lang']=="english") { $wcelang = '';} else {$wcelang = 'language_url : "'.plugins_url( '/js/ru.js',__FILE__ ) .'",';}*/
+switch ($result['wce_lang']) {
+case "english":
+    $wcelang = '';
+    break;
+case "русский":
+    $wcelang = 'language_url : "'.plugins_url( '/js/ru.js',__FILE__ ) .'",';
+    break;
+case "french":
+    $wcelang = 'language_url : "'.plugins_url( '/js/fr_FR.js',__FILE__ ) .'",';
+    break;
+}
 // Фиксированная ширина редактора
 $wcewidth = '';
 if ($result['wce_widthfix']=="1") { $wcewidth = 'width: '.$result['wce_width'].',';} 
