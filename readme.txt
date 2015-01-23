@@ -4,7 +4,7 @@ Donate link: http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 Tags: wysiwyg comment editor, comment editor, editor, comment, wysiwyg
 Requires at least: 3.6.1
 Tested up to: 4.1
-Stable tag: 1.8
+Stable tag: 1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,7 +20,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Если вам понравился мой плагин, то `пожалуйста` поставьте ему 5 звезд.
 
-The plugin adds a fully customizable WYSIWYG editor based on TinyMCE 4.1.6 for comments, using the CDN version of the editor.
+The plugin adds a fully customizable WYSIWYG editor based on TinyMCE 4.1.7 for comments, using the CDN version of the editor.
 
 In addition, the plugin adds an additional set of smileys editor that can be turned on or off in the settings.
   
@@ -64,6 +64,9 @@ In this case, the plug-in may not work, since its action is based on the functio
 
 == Changelog ==
 
+= 1.9 =
+* Fix.
+
 = 1.8 =
 * Ajout de la localisation française.
 
@@ -92,6 +95,9 @@ In this case, the plug-in may not work, since its action is based on the functio
 * Первая версия. The first version.
 
 == Upgrade Notice ==
+
+= 1.9 =
+* Fix.
 
 = 1.8 =
 * Ajout de la localisation française.
