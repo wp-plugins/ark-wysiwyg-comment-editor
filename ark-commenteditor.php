@@ -4,7 +4,7 @@ Plugin Name: ark-commenteditor
 Author: Александр Каратаев
 Plugin URI: http://blog.ddw.kz/plagin-ark-wysiwyg-comment-editor-vizualnyj-redaktor-kommentariev.html
 Description: Visual CommentEditor TinyMce Advanced
-Version: 1.9
+Version: 1.91
 Author URI: http://blog.ddw.kz
 License: GPL2
 */
@@ -95,7 +95,7 @@ function ark_wce_add_pages() {
 // Вывод страницы опций в субменю
 function ark_wce_options_page() {
 	screen_icon('users');
-    echo '<h2>'. __('Plugin','arkcommenteditor').'&nbsp;ARK WYSIWYG Comment Editor&nbsp;1.9</h2><div style="clear: both;float:right; padding-right:20px;"><noindex><a rel="nofollow" href="http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
+    echo '<h2>'. __('Plugin','arkcommenteditor').'&nbsp;ARK WYSIWYG Comment Editor&nbsp;1.91</h2><div style="clear: both;float:right; padding-right:20px;"><noindex><a rel="nofollow" href="http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 " target="_blank"><img align="right" src="' . plugins_url( '/img/donate.png', __FILE__ ) . '" alt="Пожертвовать" border="0" /></a></noindex></div>';
 ?>	
 <div class="wrap">
@@ -287,7 +287,7 @@ $result = get_option('ark_wce');
 <hr>
 <h3><?php _e('Thanks','arkcommenteditor'); ?></h3>
 <table bgcolor="#fff"><tr>
-<td><b>French translation - Laurent</b>&nbsp;&nbsp; http://www.android-logiciels.fr/
+<td><b>French translation - Laurent</b>&nbsp;&nbsp; android-logiciels.fr
 </td></tr></table>
 <hr>
 </div>	
