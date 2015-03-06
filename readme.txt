@@ -3,7 +3,7 @@ Contributors: AlexKar
 Donate link: http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 Tags: wysiwyg comment editor, comment editor, editor, comment, wysiwyg
 Requires at least: 3.6.1
-Tested up to: 4.1
+Tested up to: 4.1.1
 Stable tag: 1.91
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
