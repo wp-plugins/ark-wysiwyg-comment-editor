@@ -4,7 +4,7 @@ Donate link: http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 Tags: wysiwyg comment editor, comment editor, editor, comment, wysiwyg
 Requires at least: 3.6.1
 Tested up to: 4.2.1
-Stable tag: 1.92
+Stable tag: 1.93
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -64,6 +64,9 @@ In this case, the plug-in may not work, since its action is based on the functio
 
 == Changelog ==
 
+= 1.93 =
+* Fixed Error for version 1.92.
+
 = 1.92 =
 * Fix for WP 4.2.
 
@@ -98,6 +101,10 @@ In this case, the plug-in may not work, since its action is based on the functio
 * Первая версия. The first version.
 
 == Upgrade Notice ==
+
+= 1.93 =
+* Fixed Error for version 1.92.
+* Добавлена возможность выбора редактора TinyMCE 4.1 либо CKEditor 4.4.7
 
 = 1.92 =
 * Fix for WP 4.2.

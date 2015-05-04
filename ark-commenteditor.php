@@ -4,7 +4,7 @@ Plugin Name: ark-commenteditor
 Author: Александр Каратаев
 Plugin URI: http://blog.ddw.kz/plagin-ark-wysiwyg-comment-editor-vizualnyj-redaktor-kommentariev.html
 Description: Visual CommentEditor TinyMce Advanced
-Version: 1.92
+Version: 1.93
 Author URI: http://blog.ddw.kz
 License: GPL2
 */
@@ -96,7 +96,7 @@ function ark_wce_add_pages() {
 // Вывод страницы опций в субменю
 function ark_wce_options_page() {
 	screen_icon('users');
-    echo '<h2>'. __('Plugin','arkcommenteditor').'&nbsp;ARK WYSIWYG Comment Editor&nbsp;1.92</h2><div style="clear: both;float:right; padding-right:20px;"><noindex><a rel="nofollow" href="http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
+    echo '<h2>'. __('Plugin','arkcommenteditor').'&nbsp;ARK WYSIWYG Comment Editor&nbsp;1.93</h2><div style="clear: both;float:right; padding-right:20px;"><noindex><a rel="nofollow" href="http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 " target="_blank"><img align="right" src="' . plugins_url( '/img/donate.png', __FILE__ ) . '" alt="Пожертвовать" border="0" /></a></noindex></div>';
 ?>	
 <div class="wrap">
@@ -313,9 +313,9 @@ function ark_comment_form() {
 	$result = get_option('ark_wce');
 
 	if ($result['wce_editor'] == 'tinymce') { 
-	require_once( '/tinymce_set.php'); 
+	require_once( 'tinymce_set.php'); 
 	} else {
-	require_once ('/ckeditor_set.php');	
+	require_once ('ckeditor_set.php');	
 	}
 }
 function ark_pre_kses( $string ) {
