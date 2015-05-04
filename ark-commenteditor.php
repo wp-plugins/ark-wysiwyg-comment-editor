@@ -4,7 +4,7 @@ Plugin Name: ark-commenteditor
 Author: Александр Каратаев
 Plugin URI: http://blog.ddw.kz/plagin-ark-wysiwyg-comment-editor-vizualnyj-redaktor-kommentariev.html
 Description: Visual CommentEditor TinyMce Advanced
-Version: 1.91
+Version: 1.92
 Author URI: http://blog.ddw.kz
 License: GPL2
 */
@@ -82,6 +82,7 @@ $ark_wce_option = array(
 'wce_edtbquotestyle' => '0',
 'box_font' => '0',
 'box_fontsize' => '0',
+'wce_editor' => 'ckeditor',
 );
 add_option('ark_wce', $ark_wce_option,'','no');
 }
@@ -95,7 +96,7 @@ function ark_wce_add_pages() {
 // Вывод страницы опций в субменю
 function ark_wce_options_page() {
 	screen_icon('users');
-    echo '<h2>'. __('Plugin','arkcommenteditor').'&nbsp;ARK WYSIWYG Comment Editor&nbsp;1.91</h2><div style="clear: both;float:right; padding-right:20px;"><noindex><a rel="nofollow" href="http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
+    echo '<h2>'. __('Plugin','arkcommenteditor').'&nbsp;ARK WYSIWYG Comment Editor&nbsp;1.92</h2><div style="clear: both;float:right; padding-right:20px;"><noindex><a rel="nofollow" href="http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 " target="_blank"><img align="right" src="' . plugins_url( '/img/donate.png', __FILE__ ) . '" alt="Пожертвовать" border="0" /></a></noindex></div>';
 ?>	
 <div class="wrap">
@@ -131,6 +132,7 @@ $ark_wce_option = array(
 'wce_edtbquotestyle' => $_POST['wce_edtbquotestyle'],
 'box_font' => $_POST['box_font'],
 'box_fontsize' => $_POST['box_fontsize'],
+'wce_editor' => $_POST['wce_editor'],
 );
 update_option('ark_wce', $ark_wce_option);
 echo '<div id="setting-error-settings_updated" class="updated settings-error"><p><b>'.__('Settings saved.','arkcommenteditor').'</b></p></div>';
@@ -148,6 +150,16 @@ echo '<div id="setting-error-settings_updated" class="updated settings-error"><p
 $result = get_option('ark_wce');
 ?>
 <h3><?php _e('Editor Options','arkcommenteditor'); ?></h3>
+<table>
+<tr>
+<td>
+<?php _e('Select Editor','arkcommenteditor'); ?>
+&nbsp;<select size="1" name="wce_editor">
+    <option <?php if ($result['wce_editor'] == "ckeditor") { echo "selected"; } ?> value="ckeditor">CkEditor</option>
+    <option <?php if ($result['wce_editor'] == "tinymce") { echo "selected"; } ?> value="tinymce">TinyMCE</option>
+</select>
+&nbsp;<?php _e('When not working TinyMCE - select CkEditor','arkcommenteditor'); ?>
+</td></tr></table>
 <table>
 <tr>
 <td>
@@ -295,152 +307,17 @@ $result = get_option('ark_wce');
 }
 // Функции плагина
 /*Tiny MCE for comment*/
-add_action( 'comment_form', 'tinyMCE_comment_form');
-function tinyMCE_comment_form() {
-$result = get_option('ark_wce');
-$wceplugins = "paste, autoresize";
-$wceexplugins = '';
-$kvobtn = 0;
-$bar1 = '';
-if ($result['btn_undo'] == 1) { $bar1 = $bar1 . ' undo '; $kvobtn++; }
-if ($result['btn_redo'] == 1) { $bar1 = $bar1 . ' redo'; $kvobtn++; }
-if ($bar1!='') { $bar1 = $bar1 .  ' | '; }
-$barfont = '';
-if ($result['box_fontsize'] == 1) { $barfont = $barfont . ' fontsizeselect'; $kvobtn++; }
-if ($result['box_font'] == 1) { $barfont = $barfont . ' fontselect'; $kvobtn++; }
-if ($barfont!='') { $barfont = $barfont .  ' | '; }
-$bar2 = '';
-if ($result['btn_bold'] == 1) { $bar2 = $bar2 . ' bold'; $kvobtn++; }
-if ($result['btn_italic'] == 1) { $bar2 = $bar2 . ' italic'; $kvobtn++; }
-if ($bar2!='') { $bar2 = $bar2 .  ' | '; }
-$bar3 = '';
-if ($result['btn_underline'] == 1) { $bar3 = $bar3 . ' underline'; $kvobtn++; }
-if ($result['btn_strikethrough'] == 1) { $bar3 = $bar3 . ' strikethrough'; $kvobtn++; }
-if ($bar3!='') { $bar3 = $bar3 .  ' | '; }
-$bar4 = '';
-if ($result['btn_forecolor'] == 1) { $bar4 = $bar4 . ' forecolor'; $kvobtn++; $wceplugins = $wceplugins . ', textcolor'; }
-if ($result['btn_backcolor'] == 1) { $bar4 = $bar4 . ' backcolor'; $kvobtn++; }
-if ($bar4!='') { $bar4 = $bar4 .  ' | '; }
-$bar5 = '';
-if ($result['btn_link'] == 1) { $bar5 = $bar5 . ' link'; $kvobtn++; $wceplugins = $wceplugins . ', link'; }
-if ($result['btn_image'] == 1) { $bar5 = $bar5 . ' image'; $kvobtn++; $wceplugins = $wceplugins . ', image'; }
-if ($bar5!='') { $bar5 = $bar5 .  ' | '; }
-$bar6 = ''; 
-if ($result['btn_blockquote'] == 1) { $bar6 = $bar6 . ' blockquote'; $kvobtn++; }
-if ($result['btn_code'] == 1) { $bar6 = $bar6 . ' code'; $kvobtn++; $wceplugins = $wceplugins . ', code'; }
-if ($bar6!='","' && $bar6!='') { $bar6 = $bar6 .  ' | '; }
-// Вторая панель (это чисто эмпирически - всё может быть в одну панель)
-$bar7 = ''; 
-if ($result['btn_bullist'] == 1) { $bar7 = $bar7 . ' bullist'; $kvobtn++; }
-if ($result['btn_numlist'] == 1) { $bar7 = $bar7 . ' numlist'; $kvobtn++; }
-if ($bar7!='') { $bar7 = $bar7 .  ' | '; }
-$bar8 = ''; 
-if ($result['btn_table'] == 1) { $bar8 = $bar8 . ' table'; $kvobtn++; $wceplugins = $wceplugins . ', table'; }
-if ($bar8!='') { $bar8 = $bar8 .  ' | '; }
-$bar9 = '';
-if ($result['btn_emoticons'] == 1) { $bar9 = $bar9 . ' emoticons'; $kvobtn++; $wceplugins = $wceplugins . ', emoticons'; }
-if ($result['btn_arkemoticons'] == 1) { $bar9 = $bar9 . ' arkemoticons'; $kvobtn++; $wceplugins = $wceplugins . ', arkemoticons'; 
-$wceexplugins = '"arkemoticons" :  "'.plugins_url( '/plugins/arkemoticons/plugin.min.js',__FILE__ ) .'"';
-}
-if ($result['btn_arkemoticonssk'] == 1) { $bar9 = $bar9 . ' arkemoticonssk'; $kvobtn++; $wceplugins = $wceplugins . ', arkemoticonssk'; 
-if ($wceexplugins != '') {$wceexplugins = $wceexplugins . ', ';}
-$wceexplugins = $wceexplugins . '"arkemoticonssk" :  "'.plugins_url( '/plugins/arkemoticonssk/plugin.min.js',__FILE__ ) .'"';
-}
-if ($result['btn_arkkbabe'] == 1) { $bar9 = $bar9 . ' arkkbabe'; $kvobtn++; $wceplugins = $wceplugins . ', arkkbabe'; 
-if ($wceexplugins != '') {$wceexplugins = $wceexplugins . ', ';}
-$wceexplugins = $wceexplugins . '"arkkbabe" :  "'.plugins_url( '/plugins/arkkbabe/plugin.min.js',__FILE__ ) .'"';
-}
-if ($bar9!='') { $bar9 = $bar9 .  ' | '; }
-$bar10 = '';
-if ($result['btn_arkbquote'] == 1) { $bar10 = $bar10 . ' arkbquote'; $kvobtn++; $wceplugins = $wceplugins . ', arkbquote'; 
-if ($wceexplugins != '') {$wceexplugins = $wceexplugins . ', ';}
-$wceexplugins = $wceexplugins . '"arkbquote" :  "'.plugins_url( '/plugins/arkbquote/plugin.min.js',__FILE__ ) .'"';
-}
-if ($result['btn_preview'] == 1) { $bar10 = $bar10 . ' preview'; $kvobtn++; $wceplugins = $wceplugins . ', preview'; }
-if ($bar10!='') { $bar10 = $bar10 .  ' | '; }
-// Формируем тулбары
-$toolbar = $bar1 . $barfont. $bar2 . $bar3 . $bar4 . $bar5 . $bar6 . $bar7 . $bar8 . $bar9 . $bar10;
-$toolbar = '["' . $toolbar . '"]';
-//echo $toolbar;
-// формируем external_plugins
-if ($wceexplugins != '') {
-$wceexplugins = 'external_plugins :  { ' . $wceexplugins . ' }, ';
-}
-// Формируем языковые настройки
-/*if ($result['wce_lang']=="english") { $wcelang = '';} else {$wcelang = 'language_url : "'.plugins_url( '/js/ru.js',__FILE__ ) .'",';}*/
-switch ($result['wce_lang']) {
-case "english":
-    $wcelang = '';
-    break;
-case "русский":
-    $wcelang = 'language_url : "'.plugins_url( '/js/ru.js',__FILE__ ) .'",';
-    break;
-case "french":
-    $wcelang = 'language_url : "'.plugins_url( '/js/fr_FR.js',__FILE__ ) .'",';
-    break;
-}
-// Фиксированная ширина редактора
-$wcewidth = '';
-if ($result['wce_widthfix']=="1") { $wcewidth = 'width: '.$result['wce_width'].',';} 
-$wcecontentcss = '';
-if ($result['wce_edtbquotestyle'] == 1) {
-	$wcecontentcss = 'content_css : "'.plugins_url( '/plugins/arkbquote/css/arkbquote.css',__FILE__ ) .'",';
-}
-$myeditor = '
-	<script type="text/javascript" src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
-	<script type="text/javascript">
-	tinymce.init({
-		selector: "textarea#comment",
-		' . $wcecontentcss . '
-		valid_elements : "*[*],a[href|target=_blank]",
-		' . $wcewidth . '
-		' . $wcelang . '
-		menubar : false,
-		fontsize_formats :  "8pt 10pt 12pt 14pt 18пт 24pt 36pt",
-		statusbar : false,
-		convert_urls : false,
-		browser_spellcheck : true,
-		paste_as_text: true,
-		plugins: "' . $wceplugins . '",
-		' . $wceexplugins . '
-		toolbar: ' . $toolbar . '
-	});
-</script>
-';
-echo $myeditor;
-}
+add_action( 'comment_form', 'ark_comment_form');
+function ark_comment_form() {
+	wp_reset_query();
+	$result = get_option('ark_wce');
 
-add_action( 'wp_enqueue_scripts', 'graphene_scripts' );
-function graphene_scripts() {
-	wp_enqueue_script('jquery');
+	if ($result['wce_editor'] == 'tinymce') { 
+	require_once( '/tinymce_set.php'); 
+	} else {
+	require_once ('/ckeditor_set.php');	
+	}
 }
-
-add_filter( 'comment_reply_link', 'graphene_comment_reply_link' );
-function graphene_comment_reply_link($link) {
-	return str_replace( 'onclick=', 'data-onclick=', $link );
-}
-
-add_action( 'wp_head', 'graphene_wp_head' );
-function graphene_wp_head() {
-?>
-	<script type="text/javascript">
-		jQuery(function($){
-			$('.comment-reply-link').click(function(e){
-				e.preventDefault();
-				var args = $(this).data('onclick');
-				args = args.replace(/.*\(|\)/gi, '').replace(/\"|\s+/g, '');
-				args = args.split(',');
-				tinymce.EditorManager.execCommand('mceRemoveEditor', true, 'comment');
-				addComment.moveForm.apply( addComment, args );
-				tinymce.EditorManager.execCommand('mceAddEditor', true, 'comment');
-			});
-		});
-
-	</script>
-<?php
-}
-/*END OF Tiny MCE for comment*/
-
 function ark_pre_kses( $string ) {
    global $allowedtags;
 	$allowedtags['img'] = array( 'src' => true, 'height' => true,'width' => true, 'alt' => true, 'title' => true, );
@@ -472,4 +349,61 @@ $result = get_option('ark_wce');
 if ($result['wce_addbquotestyle'] == 1) {
 	add_action( 'wp_enqueue_scripts', 'set_style_arkwce' );
 }
+add_action( 'wp_enqueue_scripts', 'ark_scripts' );
+function ark_scripts() {
+	wp_enqueue_script('jquery');
+}
+
+add_filter( 'comment_reply_link', 'ark_comment_reply_link' );
+function ark_comment_reply_link($link) {
+	return str_replace( 'onclick=', 'data-onclick=', $link );
+}
+if ($result['wce_editor'] == 'tinymce') {
+	add_action( 'wp_head', 'ark_wp_head_tiny' );
+}else{
+	add_action( 'wp_head', 'ark_wp_head_ckeditor' );
+}	
+function ark_wp_head_tiny() {
+	?>
+		<script type="text/javascript">
+			jQuery(function($){
+				$('.comment-reply-link').click(function(e){
+				e.preventDefault();
+				var args = $(this).data('onclick');
+				args = args.replace(/.*\(|\)/gi, '').replace(/\"|\s+/g, '');
+				args = args.split(',');
+				tinymce.EditorManager.execCommand('mceRemoveEditor', true, 'comment');
+				addComment.moveForm.apply( addComment, args );
+				tinymce.EditorManager.execCommand('mceAddEditor', true, 'comment');
+				});
+			});
+		</script>
+	<?php
+}
+function ark_wp_head_ckeditor() {
+	?>
+	<script type="text/javascript">
+		jQuery(function($){
+			$('.comment-reply-link').click(function(e){
+				e.preventDefault();
+				var args = $(this).data('onclick');
+				args = args.replace(/.*\(|\)/gi, '').replace(/\"|\s+/g, '');
+				args = args.split(',');
+				CKEDITOR.instances.comment.destroy();
+				addComment.moveForm.apply( addComment, args );
+				CKEDITOR.replace( "comment" );
+			});
+		});
+	</script>
+	<?php
+}
+
+function set_style_ckeditor() {
+    // Регистрация стилей для плагина:
+    wp_register_style( 'codesnippet', plugins_url( '/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css', __FILE__ ), array(), '20131003', 'all' );
+    wp_enqueue_style( 'codesnippet' ); 
+	wp_register_script( 'ark-highlight', plugins_url('/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js', __FILE__) );
+	 wp_enqueue_script( 'ark-highlight' ); 
+} 
+add_action( 'wp_enqueue_scripts', 'set_style_ckeditor' );
 ?>

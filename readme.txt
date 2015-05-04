@@ -3,8 +3,8 @@ Contributors: AlexKar
 Donate link: http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 Tags: wysiwyg comment editor, comment editor, editor, comment, wysiwyg
 Requires at least: 3.6.1
-Tested up to: 4.1.1
-Stable tag: 1.91
+Tested up to: 4.2.1
+Stable tag: 1.92
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ The plugin adds a wysiwyg editor for comments.
 
 == Description ==
 
-Плагин добавляет полностью настраиваемый визуальный редактор на базе линейки TinyMCE 4.1 для комментариев, при этом используется CDN версия редактора.
+Плагин добавляет полностью настраиваемый визуальный редактор по выбору: TinyMCE 4.1 либо CKEditor 4.4.7 для комментариев, при этом используется CDN версия редактора.
 
 Помимо этого, плагин добавляет в редактор дополнительные наборы смайлов, которые можно включить или отключить в настройках.
   
@@ -20,7 +20,7 @@ The plugin adds a wysiwyg editor for comments.
 
 Если вам понравился мой плагин, то `пожалуйста` поставьте ему 5 звезд.
 
-The plugin adds a fully customizable WYSIWYG editor based on TinyMCE 4.1.7 for comments, using the CDN version of the editor.
+The plugin adds a fully customizable WYSIWYG editor based on TinyMCE 4.1.7 or CKEditor 4.4.7 for comments, using the CDN version of the editor.
 
 In addition, the plugin adds an additional set of smileys editor that can be turned on or off in the settings.
   
@@ -64,6 +64,9 @@ In this case, the plug-in may not work, since its action is based on the functio
 
 == Changelog ==
 
+= 1.92 =
+* Fix for WP 4.2.
+
 = 1.9 =
 * Fix.
 
@@ -95,6 +98,10 @@ In this case, the plug-in may not work, since its action is based on the functio
 * Первая версия. The first version.
 
 == Upgrade Notice ==
+
+= 1.92 =
+* Fix for WP 4.2.
+* Добавлена возможность выбора редактора TinyMCE 4.1 либо CKEditor 4.4.7
 
 = 1.9 =
 * Fix.
