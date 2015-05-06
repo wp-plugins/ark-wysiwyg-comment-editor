@@ -4,7 +4,7 @@ Plugin Name: ark-commenteditor
 Author: Александр Каратаев
 Plugin URI: http://blog.ddw.kz/plagin-ark-wysiwyg-comment-editor-vizualnyj-redaktor-kommentariev.html
 Description: Visual CommentEditor TinyMce Advanced
-Version: 1.93
+Version: 1.94
 Author URI: http://blog.ddw.kz
 License: GPL2
 */
@@ -83,6 +83,15 @@ $ark_wce_option = array(
 'box_font' => '0',
 'box_fontsize' => '0',
 'wce_editor' => 'ckeditor',
+'btn_codesnippet' => '0',
+'codesnippet_css' => 'idea',
+'btn_pastetext' => '0',
+'btn_pasteword' => '0',
+'btn_hr' => '0',
+'btn_justifyleft' => '0',
+'btn_justifycenter' => '0',
+'btn_justifyright' => '0',
+'btn_justifyblock' => '0',
 );
 add_option('ark_wce', $ark_wce_option,'','no');
 }
@@ -95,12 +104,10 @@ function ark_wce_add_pages() {
 }
 // Вывод страницы опций в субменю
 function ark_wce_options_page() {
-	screen_icon('users');
-    echo '<h2>'. __('Plugin','arkcommenteditor').'&nbsp;ARK WYSIWYG Comment Editor&nbsp;1.93</h2><div style="clear: both;float:right; padding-right:20px;"><noindex><a rel="nofollow" href="http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
+    echo '<h2>'. __('Settings visual editor comments','arkcommenteditor').'</h2><div style="clear: both;float:right; padding-right:20px;"><noindex><a rel="nofollow" href="http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 " target="_blank"><img align="right" src="' . plugins_url( '/img/donate.png', __FILE__ ) . '" alt="Пожертвовать" border="0" /></a></noindex></div>';
 ?>	
 <div class="wrap">
-<h2><?php _e('Settings visual editor comments','arkcommenteditor'); ?></h2>
 <?php // Пошла обработка запроса
 if (isset($_POST['save'])) {
 $ark_wce_option = array(
@@ -133,7 +140,17 @@ $ark_wce_option = array(
 'box_font' => $_POST['box_font'],
 'box_fontsize' => $_POST['box_fontsize'],
 'wce_editor' => $_POST['wce_editor'],
+'btn_codesnippet' => $_POST['btn_codesnippet'],
+'codesnippet_css' => $_POST['codesnippet_css'],
+'btn_pastetext' => $_POST['btn_pastetext'],
+'btn_pasteword' => $_POST['btn_pasteword'],
+'btn_hr' => $_POST['btn_hr'],
+'btn_justifyleft' => $_POST['btn_justifyleft'],
+'btn_justifycenter' => $_POST['btn_justifycenter'],
+'btn_justifyright' => $_POST['btn_justifyright'],
+'btn_justifyblock' => $_POST['btn_justifyblock'],
 );
+
 update_option('ark_wce', $ark_wce_option);
 echo '<div id="setting-error-settings_updated" class="updated settings-error"><p><b>'.__('Settings saved.','arkcommenteditor').'</b></p></div>';
 	
@@ -160,24 +177,8 @@ $result = get_option('ark_wce');
 </select>
 &nbsp;<?php _e('When not working TinyMCE - select CkEditor','arkcommenteditor'); ?>
 </td></tr></table>
-<table>
-<tr>
-<td>
-<?php _e('Language frontend Editor','arkcommenteditor'); ?>
-&nbsp;<select size="1" name="wce_lang">
-    <option <?php if ($result['wce_lang'] == "русский") { echo "selected"; } ?> value="русский">Русский</option>
-    <option <?php if ($result['wce_lang'] == "english") { echo "selected"; } ?> value="english">English</option>
-	<option <?php if ($result['wce_lang'] == "french") { echo "selected"; } ?> value="french">French</option>
-</select>
-</td>
-<td>
-<?php _e('Fixed width Editor','arkcommenteditor'); ?>&nbsp;<input type="checkbox" name="wce_widthfix" value="1" <?php if ($result['wce_widthfix'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
-</td>
-<td>
-<?php _e('Editor Width','arkcommenteditor'); ?>&nbsp;<input type="number" step="50" min="300" max="1000" name="wce_width" value="<?php echo $result['wce_width']; ?>" />&nbsp;px
-</td>
-<tr></table><hr>
-<h3><?php _e('Editor button','arkcommenteditor'); ?></h3>
+<hr>
+<h3><?php _e('General Settings buttons','arkcommenteditor'); ?></h3>
 <table>
 <tr>
 <td>
@@ -237,11 +238,68 @@ $result = get_option('ark_wce');
 <td>
 <img src="<?php echo plugins_url( '/img/emoticons.png', __FILE__ ); ?>" title="<?php _e('Emoticons','arkcommenteditor'); ?>" valign="top">  <input type="checkbox" name="btn_emoticons" value="1" <?php if ($result['btn_emoticons'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
 </td>
-<td>
-<img src="<?php echo plugins_url( '/img/preview.png', __FILE__ ); ?>" title="<?php _e('Preview','arkcommenteditor'); ?>" valign="top">  <input type="checkbox" name="btn_preview" value="1" <?php if ($result['btn_preview'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
-</td></tr>
+</tr>
 </table><hr>
-<h3><?php _e('Additional set of smileys','arkcommenteditor'); ?></h3>
+<h3><?php _e('Advanced settings CKEditor','arkcommenteditor'); ?></h3>
+<table>
+<tr>
+<td colspan="2">
+<img src="<?php echo plugins_url( '/img/pastetext.png', __FILE__ ); ?>" title="<?php _e('Paste As Text','arkcommenteditor'); ?>" valign="top">  <input type="checkbox" name="btn_pastetext" value="1" <?php if ($result['btn_pastetext'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
+
+<img src="<?php echo plugins_url( '/img/pastefromword.png', __FILE__ ); ?>" title="<?php _e('Paste from Word','arkcommenteditor'); ?>" valign="top">  <input type="checkbox" name="btn_pasteword" value="1" <?php if ($result['btn_pasteword'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
+
+<img src="<?php echo plugins_url( '/img/horizontalrule.png', __FILE__ ); ?>" title="<?php _e('HorizontalRule','arkcommenteditor'); ?>" valign="top">  <input type="checkbox" name="btn_hr" value="1" <?php if ($result['btn_hr'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
+
+<img src="<?php echo plugins_url( '/img/justifyleft.png', __FILE__ ); ?>" title="<?php _e('JustifyLeft','arkcommenteditor'); ?>" valign="top">  <input type="checkbox" name="btn_justifyleft" value="1" <?php if ($result['btn_justifyleft'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
+
+<img src="<?php echo plugins_url( '/img/justifycenter.png', __FILE__ ); ?>" title="<?php _e('JustifyCenter','arkcommenteditor'); ?>" valign="top">  <input type="checkbox" name="btn_justifycenter" value="1" <?php if ($result['btn_justifycenter'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
+
+<img src="<?php echo plugins_url( '/img/justifyright.png', __FILE__ ); ?>" title="<?php _e('JustifyRight','arkcommenteditor'); ?>" valign="top">  <input type="checkbox" name="btn_justifyright" value="1" <?php if ($result['btn_justifyright'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
+
+<img src="<?php echo plugins_url( '/img/justifyblock.png', __FILE__ ); ?>" title="<?php _e('JustifyBlock','arkcommenteditor'); ?>" valign="top">  <input type="checkbox" name="btn_justifyblock" value="1" <?php if ($result['btn_justifyblock'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
+</td></tr>
+<tr>
+<td>
+<img src="<?php echo plugins_url( '/img/codesnippet.png', __FILE__ ); ?>" title="<?php _e('CodeSnippet','arkcommenteditor'); ?>" valign="top">  <input type="checkbox" name="btn_codesnippet" value="1" <?php if ($result['btn_codesnippet'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
+</td>
+<td>
+<?php _e('Styles for snippets of code','arkcommenteditor'); ?>
+&nbsp;<select size="1" name="codesnippet_css">
+    <option <?php if ($result['codesnippet_css'] == "school_book") { echo "selected"; } ?> value="school_book">school_book</option>
+    <option <?php if ($result['codesnippet_css'] == "idea") { echo "selected"; } ?> value="idea">idea</option>
+	<option <?php if ($result['codesnippet_css'] == "sunburst") { echo "selected"; } ?> value="sunburst">sunburst</option>
+	<option <?php if ($result['codesnippet_css'] == "agate") { echo "selected"; } ?> value="agate">agate</option>
+	<option <?php if ($result['codesnippet_css'] == "vs") { echo "selected"; } ?> value="vs">Visual Studio</option>
+	<option <?php if ($result['codesnippet_css'] == "googlecode") { echo "selected"; } ?> value="googlecode">googlecode</option>
+	<option <?php if ($result['codesnippet_css'] == "monokai_sublime") { echo "selected"; } ?> value="monokai_sublime">monokai_sublime</option>
+	<option <?php if ($result['codesnippet_css'] == "obsidian") { echo "selected"; } ?> value="obsidian">obsidian</option>
+</select>&nbsp;&nbsp;<?php _e('Demonstration styles','arkcommenteditor'); ?>&nbsp;&nbsp;<noindex><a rel="nofollow" href="https://highlightjs.org/static/demo/
+" target="_blank">highlight.js demo</a></noindex>
+</td></tr></table>
+<hr>
+<h3><?php _e('Advanced settings TinyMCE','arkcommenteditor'); ?></h3>
+<table>
+<tr>
+<td>
+<?php _e('Language frontend Editor','arkcommenteditor'); ?>
+&nbsp;<select size="1" name="wce_lang">
+    <option <?php if ($result['wce_lang'] == "русский") { echo "selected"; } ?> value="русский">Русский</option>
+    <option <?php if ($result['wce_lang'] == "english") { echo "selected"; } ?> value="english">English</option>
+	<option <?php if ($result['wce_lang'] == "french") { echo "selected"; } ?> value="french">French</option>
+</select>
+</td>
+<td>
+<?php _e('Fixed width Editor','arkcommenteditor'); ?>&nbsp;<input type="checkbox" name="wce_widthfix" value="1" <?php if ($result['wce_widthfix'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
+</td>
+<td>
+<?php _e('Editor Width','arkcommenteditor'); ?>&nbsp;<input type="number" step="50" min="300" max="1000" name="wce_width" value="<?php echo $result['wce_width']; ?>" />&nbsp;px
+</td>
+<tr></table>
+<b><?php _e('Additional buttons','arkcommenteditor'); ?></b>
+<table><tr><td>
+<img src="<?php echo plugins_url( '/img/preview.png', __FILE__ ); ?>" title="<?php _e('Preview','arkcommenteditor'); ?>" valign="top">  <input type="checkbox" name="btn_preview" value="1" <?php if ($result['btn_preview'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
+</td></tr></table>
+<b><?php _e('Additional set of smileys','arkcommenteditor'); ?></b>
 <table>
 <tr>
 <td>
@@ -399,11 +457,16 @@ function ark_wp_head_ckeditor() {
 }
 
 function set_style_ckeditor() {
+	global $snippetcss;
     // Регистрация стилей для плагина:
-    wp_register_style( 'codesnippet', plugins_url( '/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css', __FILE__ ), array(), '20131003', 'all' );
+    wp_register_style( 'codesnippet', plugins_url( '/ckeditor/plugins/codesnippet/lib/highlight/styles/'.$snippetcss.'.css', __FILE__ ), array(), '20131003', 'all' );
     wp_enqueue_style( 'codesnippet' ); 
 	wp_register_script( 'ark-highlight', plugins_url('/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js', __FILE__) );
 	 wp_enqueue_script( 'ark-highlight' ); 
 } 
+if ($result['btn_codesnippet'] == 1) {
+	
+$snippetcss = $result['codesnippet_css'];
 add_action( 'wp_enqueue_scripts', 'set_style_ckeditor' );
+}
 ?>

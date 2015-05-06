@@ -4,7 +4,7 @@ Donate link: http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 Tags: wysiwyg comment editor, comment editor, editor, comment, wysiwyg
 Requires at least: 3.6.1
 Tested up to: 4.2.1
-Stable tag: 1.93
+Stable tag: 1.94
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -64,6 +64,9 @@ In this case, the plug-in may not work, since its action is based on the functio
 
 == Changelog ==
 
+= 1.94 =
+* Advanced settings CKEditor.
+
 = 1.93 =
 * Fixed Error for version 1.92.
 
@@ -101,6 +104,11 @@ In this case, the plug-in may not work, since its action is based on the functio
 * Первая версия. The first version.
 
 == Upgrade Notice ==
+
+= 1.94 =
+* Расширенные настройки CKEditor.
+* Упорядочена панель настроек
+* Для CKEditor добавлена возможность вставки фрагментов кода
 
 = 1.93 =
 * Fixed Error for version 1.92.
