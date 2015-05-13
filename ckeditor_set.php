@@ -3,6 +3,12 @@
 	$wceexplugins = '';
 	$wseprescript = '';
 	$wcecodesnippetlang = '';
+	$wcesmilelist = '';
+	$wcesmilepath = '';
+	$wcesmileycolumns = $result['wce_smileycolumns'];
+	if ($wcesmileycolumns !== '') {
+		$wcesmileycolumns = 'CKEDITOR.config.smiley_columns = ' .$wcesmileycolumns;
+	}
 	$kvobtn = 0;
 	$bar1 = '';
 	if ($result['btn_undo'] == 1) { $bar1 = $bar1 . '"Undo",'; $kvobtn++; }
@@ -33,7 +39,49 @@
 	$bar5 = '';
 	if ($result['btn_link'] == 1) { $bar5 = $bar5 . '"Link","Unlink","Anchor","-",'; $kvobtn++; }
 	if ($result['btn_image'] == 1) { $bar5 = $bar5 . '"Image",'; $kvobtn++; }
-	if ($result['btn_emoticons'] == 1) { $bar5 = $bar5 . '"Smiley","-",'; $kvobtn++; }
+	if ($result['btn_emoticons'] == 1) { $bar5 = $bar5 . '"Smiley","-",'; $kvobtn++; 
+		if ($result['btn_arkemoticons'] == 1) {
+			$wcesmilepath = plugins_url( '/ark-wysiwyg-comment-editor/plugins/');
+			$wcesmilelist = '"arkemoticons/img/01.gif","arkemoticons/img/02.gif","arkemoticons/img/03.gif","arkemoticons/img/04.gif","arkemoticons/img/05.gif",
+			"arkemoticons/img/06.gif","arkemoticons/img/07.gif","arkemoticons/img/08.gif","arkemoticons/img/09.gif","arkemoticons/img/10.gif",
+			"arkemoticons/img/11.gif","arkemoticons/img/12.gif","arkemoticons/img/13.gif","arkemoticons/img/14.gif","arkemoticons/img/15.gif",
+			"arkemoticons/img/16.gif","arkemoticons/img/17.gif","arkemoticons/img/18.gif","arkemoticons/img/19.gif","arkemoticons/img/20.gif",
+			"arkemoticons/img/21.gif","arkemoticons/img/22.gif","arkemoticons/img/23.gif","arkemoticons/img/24.gif","arkemoticons/img/25.gif",
+			"arkemoticons/img/26.gif","arkemoticons/img/27.gif","arkemoticons/img/28.gif","arkemoticons/img/29.gif","arkemoticons/img/30.gif",
+			"arkemoticons/img/31.gif","arkemoticons/img/32.gif","arkemoticons/img/33.gif","arkemoticons/img/34.gif","arkemoticons/img/35.gif",
+			"arkemoticons/img/36.gif","arkemoticons/img/37.gif","arkemoticons/img/38.gif","arkemoticons/img/39.gif","arkemoticons/img/40.gif",
+			"arkemoticons/img/41.gif","arkemoticons/img/42.gif","arkemoticons/img/43.gif","arkemoticons/img/44.gif","arkemoticons/img/45.gif",
+			"arkemoticons/img/46.gif","arkemoticons/img/47.gif"';
+		}
+		if ($result['btn_arkemoticonssk'] == 1) {
+			if ($wcesmilepath == '') {$wcesmilepath = plugins_url( '/ark-wysiwyg-comment-editor/plugins/');} 
+			if ($wcesmilelist !== '') {$wcesmilelist = $wcesmilelist .',';}
+			$wcesmilelist = $wcesmilelist .'"arkemoticonssk/img/01.gif","arkemoticonssk/img/02.gif","arkemoticonssk/img/03.gif","arkemoticonssk/img/04.gif",
+			"arkemoticonssk/img/05.gif","arkemoticonssk/img/06.gif","arkemoticonssk/img/07.gif","arkemoticonssk/img/08.gif","arkemoticonssk/img/09.gif",
+			"arkemoticonssk/img/10.gif","arkemoticonssk/img/11.gif","arkemoticonssk/img/12.gif","arkemoticonssk/img/13.gif","arkemoticonssk/img/14.gif",
+			"arkemoticonssk/img/15.gif","arkemoticonssk/img/16.gif","arkemoticonssk/img/17.gif","arkemoticonssk/img/18.gif","arkemoticonssk/img/19.gif",
+			"arkemoticonssk/img/20.gif","arkemoticonssk/img/21.gif","arkemoticonssk/img/22.gif"';
+		}
+		if ($result['btn_arkkbabe'] == 1) {
+			if ($wcesmilepath == '') {$wcesmilepath = plugins_url( '/ark-wysiwyg-comment-editor/plugins/');} 
+			if ($wcesmilelist !== '') {$wcesmilelist = $wcesmilelist .',';}
+			$wcesmilelist = $wcesmilelist .'"arkkbabe/img/01.gif","arkkbabe/img/02.gif","arkkbabe/img/03.gif","arkkbabe/img/04.gif","arkkbabe/img/05.gif",
+			"arkkbabe/img/06.gif","arkkbabe/img/07.gif","arkkbabe/img/08.gif","arkkbabe/img/09.gif","arkkbabe/img/10.gif","arkkbabe/img/11.gif",
+			"arkkbabe/img/12.gif","arkkbabe/img/13.gif","arkkbabe/img/14.gif","arkkbabe/img/15.gif","arkkbabe/img/16.gif","arkkbabe/img/17.gif",
+			"arkkbabe/img/18.gif","arkkbabe/img/19.gif","arkkbabe/img/20.gif","arkkbabe/img/21.gif","arkkbabe/img/22.gif","arkkbabe/img/23.gif",
+			"arkkbabe/img/24.gif","arkkbabe/img/25.gif","arkkbabe/img/26.gif","arkkbabe/img/27.gif","arkkbabe/img/28.gif","arkkbabe/img/29.gif",
+			"arkkbabe/img/30.gif"';
+		}
+		if ($wcesmilepath !== '') {
+			$wcesmilepath = 'CKEDITOR.config.smiley_path = "'.$wcesmilepath .'";';
+		}
+		if ($wcesmilelist == '') {
+		$wcesmilelist = '"regular_smile.png", "sad_smile.png", "wink_smile.png", "teeth_smile.png", "confused_smile.png", "tongue_smile.png",
+		"embarrassed_smile.png", "omg_smile.png", "whatchutalkingabout_smile.png", "angry_smile.png", "angel_smile.png", "shades_smile.png",
+		"devil_smile.png", "cry_smile.png", "lightbulb.png", "thumbs_down.png", "thumbs_up.png", "heart.png",
+		"broken_heart.png", "kiss.png", "envelope.png"';
+		}
+	}
 	if ($result['btn_hr'] == 1) { $bar5 = $bar5 . '"HorizontalRule",'; $kvobtn++; }	
 	if ($bar5!='') { $bar5 = '{name: "bar5", items: ['.$bar5 .  ' ] } ,'; }
 	$bar6 = ''; 
@@ -107,6 +155,9 @@
 			CKEDITOR.config.removePlugins = "scayt,contextmenu";
 			/*CKEDITOR.config.skin = "moonocolor";*/
 			/*CKEDITOR.config.uiColor = "#10E6EF";*/
+			'.$wcesmileycolumns.'
+			'.$wcesmilepath .'
+			CKEDITOR.config.smiley_images = ['.$wcesmilelist .'];
 			CKEDITOR.config.toolbar = ['.$toolbar.'];
         </script>
 	';

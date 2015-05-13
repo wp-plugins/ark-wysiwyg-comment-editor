@@ -4,7 +4,7 @@ Plugin Name: ark-commenteditor
 Author: Александр Каратаев
 Plugin URI: http://blog.ddw.kz/plagin-ark-wysiwyg-comment-editor-vizualnyj-redaktor-kommentariev.html
 Description: Visual CommentEditor TinyMce Advanced
-Version: 1.94
+Version: 1.95
 Author URI: http://blog.ddw.kz
 License: GPL2
 */
@@ -92,6 +92,7 @@ $ark_wce_option = array(
 'btn_justifycenter' => '0',
 'btn_justifyright' => '0',
 'btn_justifyblock' => '0',
+'wce_smileycolumns' => '8',
 );
 add_option('ark_wce', $ark_wce_option,'','no');
 }
@@ -149,6 +150,7 @@ $ark_wce_option = array(
 'btn_justifycenter' => $_POST['btn_justifycenter'],
 'btn_justifyright' => $_POST['btn_justifyright'],
 'btn_justifyblock' => $_POST['btn_justifyblock'],
+'wce_smileycolumns' => $_POST['wce_smileycolumns'],
 );
 
 update_option('ark_wce', $ark_wce_option);
@@ -240,6 +242,35 @@ $result = get_option('ark_wce');
 </td>
 </tr>
 </table><hr>
+
+<b><?php _e('Additional set of smileys','arkcommenteditor'); ?></b>
+<br><font style="color:blue; font-weight:bold;"><?php _e('For TinyMCE will be added to the individual buttons for each set. For SKEditor default smileys will be replaced with the selected set.','arkcommenteditor'); ?></font>
+<table>
+<tr>
+<td>
+<img src="<?php echo plugins_url( '/img/qip.png', __FILE__ ); ?>" title="qip" valign="top">
+</td>
+<td>
+<img src="<?php echo plugins_url( '/img/skype.png', __FILE__ ); ?>" title="skype" valign="top">
+</td>
+<td>
+<img src="<?php echo plugins_url( '/img/k-babe.png', __FILE__ ); ?>" title="k-babe" valign="top">
+</td>
+</tr>
+<tr>
+<td>
+<?php _e('From a set of emoticons QIP','arkcommenteditor'); ?> <input type="checkbox" name="btn_arkemoticons" value="1" <?php if ($result['btn_arkemoticons'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
+</td>
+<td>
+<?php _e('From a set of emoticons Skype','arkcommenteditor'); ?> <input type="checkbox" name="btn_arkemoticonssk" value="1" <?php if ($result['btn_arkemoticonssk'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
+</td>
+<td>
+<?php _e('From a set of emoticons k-babe','arkcommenteditor'); ?><input type="checkbox" name="btn_arkkbabe" value="1" <?php if ($result['btn_arkkbabe'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
+</td>
+</tr>
+</table>
+<hr>
+
 <h3><?php _e('Advanced settings CKEditor','arkcommenteditor'); ?></h3>
 <table>
 <tr>
@@ -275,6 +306,8 @@ $result = get_option('ark_wce');
 	<option <?php if ($result['codesnippet_css'] == "obsidian") { echo "selected"; } ?> value="obsidian">obsidian</option>
 </select>&nbsp;&nbsp;<?php _e('Demonstration styles','arkcommenteditor'); ?>&nbsp;&nbsp;<noindex><a rel="nofollow" href="https://highlightjs.org/static/demo/
 " target="_blank">highlight.js demo</a></noindex>
+</td></tr><tr><td colspan="2">
+<?php _e('The number of columns with smiles','arkcommenteditor'); ?>&nbsp;<input type="number" min="6" max="16" name="wce_smileycolumns" value="<?php echo $result['wce_smileycolumns']; ?>" />&nbsp;
 </td></tr></table>
 <hr>
 <h3><?php _e('Advanced settings TinyMCE','arkcommenteditor'); ?></h3>
@@ -299,31 +332,7 @@ $result = get_option('ark_wce');
 <table><tr><td>
 <img src="<?php echo plugins_url( '/img/preview.png', __FILE__ ); ?>" title="<?php _e('Preview','arkcommenteditor'); ?>" valign="top">  <input type="checkbox" name="btn_preview" value="1" <?php if ($result['btn_preview'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
 </td></tr></table>
-<b><?php _e('Additional set of smileys','arkcommenteditor'); ?></b>
-<table>
-<tr>
-<td>
-<img src="<?php echo plugins_url( '/img/qip.png', __FILE__ ); ?>" title="qip" valign="top">
-</td>
-<td>
-<img src="<?php echo plugins_url( '/img/skype.png', __FILE__ ); ?>" title="skype" valign="top">
-</td>
-<td>
-<img src="<?php echo plugins_url( '/img/k-babe.png', __FILE__ ); ?>" title="k-babe" valign="top">
-</td>
-</tr>
-<tr>
-<td>
-<?php _e('From a set of emoticons QIP','arkcommenteditor'); ?> <input type="checkbox" name="btn_arkemoticons" value="1" <?php if ($result['btn_arkemoticons'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
-</td>
-<td>
-<?php _e('From a set of emoticons Skype','arkcommenteditor'); ?> <input type="checkbox" name="btn_arkemoticonssk" value="1" <?php if ($result['btn_arkemoticonssk'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
-</td>
-<td>
-<?php _e('From a set of emoticons k-babe','arkcommenteditor'); ?><input type="checkbox" name="btn_arkkbabe" value="1" <?php if ($result['btn_arkkbabe'] == 1) { echo "checked"; } ?>/> &nbsp;&nbsp;
-</td>
-</tr>
-</table>
+
 <hr>
 <h3><?php _e('Experimental options','arkcommenteditor'); ?></h3>
 <font style="color:red; font-weight:bold;"><?php _e('These options and their experimental use of a matter of personal preference. Try it - you may like it. If not - at any time, deselect options.','arkcommenteditor'); ?></font>
