@@ -145,7 +145,7 @@
 		$wcecontentcss = 'content_css : "'.plugins_url( '/plugins/arkbquote/css/arkbquote.css',__FILE__ ) .'",';
 	}
 	$myeditor = '
-		<script src="//cdn.ckeditor.com/4.4.7/full-all/ckeditor.js"></script>
+		<script src="//cdn.ckeditor.com/4.5.1/full-all/ckeditor.js"></script>
         <script>
 			'.$wseprescript.'
 			CKEDITOR.replace( "comment" );
