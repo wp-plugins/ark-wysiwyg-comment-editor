@@ -88,7 +88,7 @@
 		$wcecontentcss = 'content_css : "'.plugins_url( '/plugins/arkbquote/css/arkbquote.css',__FILE__ ) .'",';
 	}
 	$myeditor = '
-		<script type="text/javascript" src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+		<script type="text/javascript" src="//tinymce.cachefly.net/4.2/tinymce.min.js"></script>
 		<script type="text/javascript">
 		tinymce.init({
 			selector: "textarea#comment",

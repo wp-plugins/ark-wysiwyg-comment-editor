@@ -4,7 +4,7 @@ Donate link: http://blog.ddw.kz/podderzhka-proektov-avtora-etogo-bloga
 Tags: wysiwyg comment editor, comment editor, editor, comment, wysiwyg
 Requires at least: 3.6.1
 Tested up to: 4.2.2
-Stable tag: 1.96
+Stable tag: 1.97
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -64,6 +64,9 @@ In this case, the plug-in may not work, since its action is based on the functio
 
 == Changelog ==
 
+= 1.97 =
+* New version CDN TinyMCE.
+
 = 1.96 =
 * New version CDN CKEditor.
 
@@ -110,6 +113,9 @@ In this case, the plug-in may not work, since its action is based on the functio
 * Первая версия. The first version.
 
 == Upgrade Notice ==
+
+= 1.97 =
+* Плагин переключен на новую версию CDN TinyMCE - 4.2.
 
 = 1.96 =
 * Плагин переключен на новую версию CDN CKEditor - 4.5.1.

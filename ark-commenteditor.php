@@ -4,7 +4,7 @@ Plugin Name: ark-commenteditor
 Author: Александр Каратаев
 Plugin URI: http://blog.ddw.kz/plagin-ark-wysiwyg-comment-editor-vizualnyj-redaktor-kommentariev.html
 Description: Visual CommentEditor TinyMce Advanced
-Version: 1.96
+Version: 1.97
 Author URI: http://blog.ddw.kz
 License: GPL2
 */
